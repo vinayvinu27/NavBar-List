@@ -4,41 +4,35 @@ CSS For NavBar
     padding: 0;
 }
 
-.navbar {
-    display: flex;
-    background-color: #222e35;
-    line-height: 4rem;
-    justify-content: space-between;
-    align-items: center;
-}
-.left
-{
-    color: white;
-    padding: 0px 20px;
-}
-.serach
-{
-    padding: 0px 30px;
-}
-.inputsearch
-{
-    display: inline;
-    height: 30px;
-    width: 35rem;
-    border-radius: 5px;
-    font-size: 15px;
-    color: black;
-}
-.Submit
-{
-    height: 35px;
-    width: 70px;
-    border-radius: 5px;
+body {
+    background-color: aqua;
 }
 
-.right ul {
+.navbar {
     display: flex;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 4rem;
+    background-color: #242582;
+}
+
+.left {
+    padding: 0px 20px;
+}
+
+.left h1 {
+    color: white;
+}
+
+input {
+    width: 30rem;
+    height: 1.9rem;
+    border-radius: 3px;
+}
+
+.submit {
+    height: 2rem;
+    width: 70px;
 }
 
 .checkBtn {
@@ -57,56 +51,63 @@ CSS For NavBar
     color: #ed1e79;
     line-height: 80px;
 }
+.list {
+    display: flex;
+    list-style: none;
+}
+
 .list li a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 25px
 }
-.list li a:hover
-{
-    color: black;
-    background-color: #fff;
-    border-radius: 5px;
+
+.list li a:hover {
+    background-color: #242582;
+    color: rgb(147, 139, 139);
+    transition: all 1s;
 }
-@media screen and (max-width:1336px) {
-    .Submit{
+
+@media screen and (max-width:1248px) {
+    .submit {
         display: none;
+        transition: all 1s;
     }
 }
 
-@media screen and (max-width:1261px) {
-    .inputsearch
-    {
+@media screen and (max-width:1248px) {
+    input {
         display: none;
+        transition: all 1s;
+
     }
 }
-@media screen and (max-width:805px)
-{
 
-    .list{
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        background-color: #222e35;
-        color: white;
+@media screen and (max-width:805px) {
+    .list {
         display: flex;
+        text-align: center;
         flex-direction: column;
         position: fixed;
+        width: 100%;
+        height: 100vh;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        transition: all 1s;
         left: 100%;
-        top: 4rem;
-        transition: all ls;
-    }
-    #check
-    {
-        display: none;
-    }
-    .checkBtn
-    {
-        display: block;
-    }
-    #check:checked~ul
-    {
-        left: 0%;
+        top: 5rem;
     }
 
+    #check {
+        display: none;
+    }
+
+    .checkBtn {
+        display: block;
+    }
+
+    #check:checked~ul {
+        left: 0%;
+    }
 }
